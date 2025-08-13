@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Task Tracker</h1>
+    <p class="subtitle">Планируй как в Google Calendar, управляй как в Yougile</p>
+    
+    <div class="columns">
+        <div class="column" >
+            <h2>На сейчас</h2>
+            <div id="nowTasks">
+                <!-- Срочные задачи будут здесь -->
+            </div>
+        </div>
+        
+        <div class="column" >
+            <h2>В планах</h2>
+            <div id="plansTasks">
+                <!-- Задачи на будущее будут здесь -->
+            </div>
+        </div>
+    </div>
+    
+    <button class="floating-add-btn" id="addBtn">+</button>
+    
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Добавить новую запись</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            
+            <div class="type-selector">
+                <div class="type-option active" data-type="task">Задача</div>
+                <div class="type-option" data-type="event">Мероприятие</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="taskTitle">Название</label>
+                <input type="text" id="taskTitle" placeholder="Что нужно сделать?">
+            </div>
+            
+            <div class="form-group">
+                <label for="taskDesc">Описание (необязательно)</label>
+                <textarea id="taskDesc" placeholder="Детали..."></textarea>
+            </div>
+            
+            <div class="form-group" id="taskTimeGroup">
+                <label for="taskTime">Дата и время</label>
+                <input type="datetime-local" id="taskTime">
+            </div>
+            
+            <div class="form-group" id="eventTimeGroup" style="display: none;">
+                <label>Время мероприятия</label>
+                <div class="time-fields">
+                    <div>
+                        <label for="eventStart">Начало</label>
+                        <input type="datetime-local" id="eventStart">
+                    </div>
+                    <div>
+                        <label for="eventEnd">Конец</label>
+                        <input type="datetime-local" id="eventEnd">
+                    </div>
+                </div>
+            </div>
+            
+            <button class="submit-btn" id="submitTask">Добавить</button>
+        </div>
+    </div>
+     <script src="script.js"></script>
+</body>
+</html>
