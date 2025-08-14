@@ -1,0 +1,7 @@
+{
+  "name": "Task tracker",
+  "description": "Приложение для отслеживания задач",
+  "type": "iframe",
+  "url": "https://hexvgon666.github.io/Task_tracker/",
+  "scopes": ["friends", "photos"]
+}
