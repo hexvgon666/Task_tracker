@@ -1,3 +1,4 @@
+
  // Массив для хранения задач
         let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         
@@ -379,4 +380,5 @@
         // Сохранение задач в localStorage
         function saveTasks() {
             localStorage.setItem('tasks', JSON.stringify(tasks));
+
         }
